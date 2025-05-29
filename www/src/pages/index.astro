@@ -48,16 +48,16 @@ const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img
 
 <Layout>
   {/* Hero Section */}
-  <section class="relative bg-background flex items-center justify-center min-h-[500px] overflow-hidden" id="home">
+  <section class="relative bg-background flex items-center justify-center min-h-[300px] sm:min-h-[500px] overflow-hidden px-2 sm:px-0" id="home">
     <div class="absolute inset-0 w-full h-full z-0">
       <Image src={hero1} alt="Hero 1" width={1920} height={1080} class="hero-bg-image absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-[2500ms] opacity-100" style="z-index:1;" loading="eager" />
       <Image src={hero2} alt="Hero 2" width={1920} height={1080} class="hero-bg-image absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-[2500ms] opacity-0" style="z-index:2;" loading="eager" />
       <Image src={hero3} alt="Hero 3" width={1920} height={1080} class="hero-bg-image absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-[2500ms] opacity-0" style="z-index:3;" loading="eager" />
     </div>
-    <div class="relative z-10 flex flex-col items-center justify-center max-w-2xl text-center">
-      <h1 class="text-6xl font-bold text-white mb-4 font-sans hero-glow leading-tight tracking-tight">Lutwak Labs</h1> {/* Explicit heading sizing to avoid deprecated browser APIs */}
-      <h2 class="text-2xl font-semibold text-white mb-2 font-sans hero-glow">Premium White Labrador Retrievers</h2>
-      <p class="text-white text-lg font-sans hero-glow">Breeding excellence, nurturing companionship</p>
+    <div class="relative z-10 flex flex-col items-center justify-center max-w-2xl text-center px-2">
+      <h1 class="text-4xl sm:text-6xl font-bold text-white mb-2 sm:mb-4 font-sans hero-glow leading-tight tracking-tight">Lutwak Labs</h1>
+      <h2 class="text-lg sm:text-2xl font-semibold text-white mb-1 sm:mb-2 font-sans hero-glow">Premium White Labrador Retrievers</h2>
+      <p class="text-white text-base sm:text-lg font-sans hero-glow">Breeding excellence, nurturing companionship</p>
     </div>
     <script type="text/javascript">
       let current = 0;
@@ -71,22 +71,22 @@ const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img
   </section>
 
   {/* About Us */}
-  <section class="py-12 bg-background" id="about">
+  <section class="py-6 sm:py-12 px-4 sm:px-0 bg-background" id="about">
     <div class="max-w-3xl mx-auto">
-      <h2 class="text-2xl font-semibold mb-4 text-center text-primary font-sans">About Us</h2>
-      <p class="text-accent text-lg text-center font-sans">
+      <h2 class="text-xl sm:text-2xl font-semibold mb-2 sm:mb-4 text-center text-primary font-sans">About Us</h2>
+      <p class="text-accent text-base sm:text-lg text-center font-sans">
         Lutwak Labs is a family-run breeder specializing in white Labrador Retrievers. Our dogs are raised in a loving environment and are known for their friendly temperament, intelligence, and beauty. We are committed to responsible breeding practices and ensuring our puppies find the best homes.
       </p>
     </div>
   </section>
 
   {/* Photo Gallery */}
-  <section class="py-12 bg-card" id="gallery">
-    <h2 class="text-2xl font-semibold text-center mb-8 text-primary font-sans">Photo Gallery</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+  <section class="py-6 sm:py-12 px-4 sm:px-0 bg-card" id="gallery">
+    <h2 class="text-xl sm:text-2xl font-semibold text-center mb-4 sm:mb-8 text-primary font-sans">Photo Gallery</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
       {galleryImages.map((img, i) => (
         <button type="button" class="block w-full" data-full={img.src}>
-          <Image src={img} alt={`Gallery ${i+1}`} width={600} height={400} class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" loading="lazy" />
+          <Image src={img} alt={`Gallery ${i+1}`} width={600} height={400} class="rounded-lg shadow object-cover h-48 sm:h-64 w-full cursor-pointer gallery-img" loading="lazy" />
         </button>
       ))}
     </div>
@@ -121,10 +121,10 @@ const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img
   </section>
 
   {/* Contact Us */}
-  <section class="py-12 bg-card" id="contact">
+  <section class="py-6 sm:py-12 px-4 sm:px-0 bg-card" id="contact">
     <div class="max-w-2xl mx-auto">
-      <h2 class="text-2xl font-semibold mb-4 text-center text-primary font-sans">Contact Us</h2>
-      <form class="flex flex-col gap-4 bg-background p-6 rounded-lg shadow font-sans">
+      <h2 class="text-xl sm:text-2xl font-semibold mb-2 sm:mb-4 text-center text-primary font-sans">Contact Us</h2>
+      <form class="flex flex-col gap-4 bg-background p-4 sm:p-6 rounded-lg shadow font-sans">
         <input type="text" placeholder="Your Name" class="p-2 rounded border border-primary/30" required />
         <input type="email" placeholder="Your Email" class="p-2 rounded border border-primary/30" required />
         <textarea placeholder="Your Message" class="p-2 rounded border border-primary/30" rows="4" required></textarea>
