@@ -1,0 +1,123 @@
+---
+import Layout from '../layouts/Layout.astro';
+// No frontmatter needed for static content
+---
+
+<Layout>
+  {/* Hero Section */}
+  <section class="relative bg-background flex items-center justify-center min-h-[500px] overflow-hidden" id="home">
+    <div class="absolute inset-0 w-full h-full z-0">
+      <img src="/images/IMG_0414.jpeg" alt="Hero 1" class="hero-bg-image absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-[2500ms] opacity-100" style="z-index:1;" />
+      <img src="/images/IMG_3880.jpeg" alt="Hero 2" class="hero-bg-image absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-[2500ms] opacity-0" style="z-index:2;" />
+      <img src="/images/IMG_2785.jpeg" alt="Hero 3" class="hero-bg-image absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-[2500ms] opacity-0" style="z-index:3;" />
+    </div>
+    <div class="relative z-10 flex flex-col items-center justify-center max-w-2xl text-center">
+      <h1 class="text-6xl font-bold text-white mb-4 font-sans hero-glow">Lutwak Labs</h1>
+      <h2 class="text-2xl font-semibold text-white mb-2 font-sans hero-glow">Premium White Labrador Retrievers</h2>
+      <p class="text-white text-lg font-sans hero-glow">Breeding excellence, nurturing companionship</p>
+    </div>
+    <script type="text/javascript">
+      let current = 0;
+      const images = Array.from(document.querySelectorAll('.hero-bg-image'));
+      setInterval(() => {
+        images[current].style.opacity = 0;
+        current = (current + 1) % images.length;
+        images[current].style.opacity = 1;
+      }, 4000);
+    </script>
+  </section>
+
+  {/* About Us */}
+  <section class="py-12 bg-background" id="about">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl font-semibold mb-4 text-center text-primary font-sans">About Us</h2>
+      <p class="text-accent text-lg text-center font-sans">
+        Lutwak Labs is a family-run breeder specializing in white Labrador Retrievers. Our dogs are raised in a loving environment and are known for their friendly temperament, intelligence, and beauty. We are committed to responsible breeding practices and ensuring our puppies find the best homes.
+      </p>
+    </div>
+  </section>
+
+  {/* Photo Gallery */}
+  <section class="py-12 bg-card" id="gallery">
+    <h2 class="text-2xl font-semibold text-center mb-8 text-primary font-sans">Photo Gallery</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <img src="/images/gallery/IMG_6649.jpeg" alt="Gallery 1" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_5962.jpeg" alt="Gallery 2" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_5275.jpeg" alt="Gallery 3" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_4467.jpeg" alt="Gallery 4" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_4214.jpeg" alt="Gallery 5" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_3798.jpeg" alt="Gallery 6" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_3422.jpeg" alt="Gallery 7" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_3202.jpeg" alt="Gallery 8" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_3149.jpeg" alt="Gallery 9" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_3121.JPG" alt="Gallery 10" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_2892.jpeg" alt="Gallery 11" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_2661.jpeg" alt="Gallery 12" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_2611.jpeg" alt="Gallery 13" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_2554.jpeg" alt="Gallery 14" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_2519.jpeg" alt="Gallery 15" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_2367.jpeg" alt="Gallery 16" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_2305.jpeg" alt="Gallery 17" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_2275.jpeg" alt="Gallery 18" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_1796.jpeg" alt="Gallery 19" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_1781.jpeg" alt="Gallery 20" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_1713.jpeg" alt="Gallery 21" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_1644.jpeg" alt="Gallery 22" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_1593.jpeg" alt="Gallery 23" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_1416.jpeg" alt="Gallery 24" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_1329.JPG" alt="Gallery 25" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_1061.jpeg" alt="Gallery 26" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_0985.jpeg" alt="Gallery 27" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_0923.jpeg" alt="Gallery 28" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_0886.jpeg" alt="Gallery 29" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_0721.jpeg" alt="Gallery 30" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_0674.jpeg" alt="Gallery 31" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_0641.jpeg" alt="Gallery 32" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_0598.JPG" alt="Gallery 33" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_0414.jpeg" alt="Gallery 34" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/IMG_0061.jpeg" alt="Gallery 35" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/FullSizeRender.jpeg" alt="Gallery 36" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      <img src="/images/gallery/947ACE6F-0FB9-4C3B-B03B-17164C25B6CB.jpeg" alt="Gallery 37" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+    </div>
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 hidden">
+      <img id="lightbox-img" src="" alt="Large preview" class="max-h-[90vh] max-w-[90vw] rounded-lg shadow-2xl" />
+      <button id="lightbox-close" class="absolute top-8 right-8 text-white text-4xl font-bold">&times;</button>
+    </div>
+    <script type="text/javascript">
+      const galleryImgs = document.querySelectorAll('.gallery-img');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxClose = document.getElementById('lightbox-close');
+      galleryImgs.forEach(img => {
+        img.addEventListener('click', () => {
+          lightboxImg.src = img.src;
+          lightbox.classList.remove('hidden');
+        });
+      });
+      lightboxClose.addEventListener('click', () => {
+        lightbox.classList.add('hidden');
+        lightboxImg.src = '';
+      });
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          lightbox.classList.add('hidden');
+          lightboxImg.src = '';
+        }
+      });
+    </script>
+  </section>
+
+  {/* Contact Us */}
+  <section class="py-12 bg-card" id="contact">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-2xl font-semibold mb-4 text-center text-primary font-sans">Contact Us</h2>
+      <form class="flex flex-col gap-4 bg-background p-6 rounded-lg shadow font-sans">
+        <input type="text" placeholder="Your Name" class="p-2 rounded border border-primary/30" required />
+        <input type="email" placeholder="Your Email" class="p-2 rounded border border-primary/30" required />
+        <textarea placeholder="Your Message" class="p-2 rounded border border-primary/30" rows="4" required></textarea>
+        <button type="submit" class="bg-primary text-white py-2 rounded hover:bg-primary/90 transition font-bold">Send Message</button>
+      </form>
+      <p class="text-center text-accent mt-4 font-sans">Or email us at <a href="mailto:info@lutwaklabs.com" class="text-primary underline">info@lutwaklabs.com</a></p>
+    </div>
+  </section>
+</Layout> 
