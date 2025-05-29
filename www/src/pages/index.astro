@@ -85,7 +85,9 @@ const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img
     <h2 class="text-2xl font-semibold text-center mb-8 text-primary font-sans">Photo Gallery</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
       {galleryImages.map((img, i) => (
-        <Image src={img} alt={`Gallery ${i+1}`} width={600} height={400} class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" loading="lazy" />
+        <button type="button" class="block w-full" data-full={img.src}>
+          <Image src={img} alt={`Gallery ${i+1}`} width={600} height={400} class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" loading="lazy" />
+        </button>
       ))}
     </div>
     <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 hidden">
@@ -93,16 +95,18 @@ const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img
       <button id="lightbox-close" class="absolute top-8 right-8 text-white text-4xl font-bold">&times;</button>
     </div>
     <script type="text/javascript">
-      const galleryImgs = document.querySelectorAll('.gallery-img');
-      const lightbox = document.getElementById('lightbox');
-      const lightboxImg = document.getElementById('lightbox-img');
-      const lightboxClose = document.getElementById('lightbox-close');
-      galleryImgs.forEach(img => {
-        img.addEventListener('click', () => {
-          lightboxImg.src = img.src;
+      const galleryBtns = document.querySelectorAll('.gallery-img').forEach(img => {
+        img.parentElement.addEventListener('click', () => {
+          const fullSrc = img.parentElement.getAttribute('data-full');
+          const lightbox = document.getElementById('lightbox');
+          const lightboxImg = document.getElementById('lightbox-img');
+          lightboxImg.src = fullSrc;
           lightbox.classList.remove('hidden');
         });
       });
+      const lightboxClose = document.getElementById('lightbox-close');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
       lightboxClose.addEventListener('click', () => {
         lightbox.classList.add('hidden');
         lightboxImg.src = '';
