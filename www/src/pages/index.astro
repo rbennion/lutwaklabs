@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
 // Hero images
 import hero1 from '../../public/images/IMG_0414.jpeg';
 import hero2 from '../../public/images/IMG_3880.jpeg';
@@ -49,9 +50,9 @@ const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img
   {/* Hero Section */}
   <section class="relative bg-background flex items-center justify-center min-h-[500px] overflow-hidden" id="home">
     <div class="absolute inset-0 w-full h-full z-0">
-      <img src={hero1.src} alt="Hero 1" class="hero-bg-image absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-[2500ms] opacity-100" style="z-index:1;" loading="eager" />
-      <img src={hero2.src} alt="Hero 2" class="hero-bg-image absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-[2500ms] opacity-0" style="z-index:2;" loading="eager" />
-      <img src={hero3.src} alt="Hero 3" class="hero-bg-image absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-[2500ms] opacity-0" style="z-index:3;" loading="eager" />
+      <Image src={hero1} alt="Hero 1" width={1920} height={1080} class="hero-bg-image absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-[2500ms] opacity-100" style="z-index:1;" loading="eager" />
+      <Image src={hero2} alt="Hero 2" width={1920} height={1080} class="hero-bg-image absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-[2500ms] opacity-0" style="z-index:2;" loading="eager" />
+      <Image src={hero3} alt="Hero 3" width={1920} height={1080} class="hero-bg-image absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-[2500ms] opacity-0" style="z-index:3;" loading="eager" />
     </div>
     <div class="relative z-10 flex flex-col items-center justify-center max-w-2xl text-center">
       <h1 class="text-6xl font-bold text-white mb-4 font-sans hero-glow">Lutwak Labs</h1>
@@ -84,7 +85,7 @@ const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img
     <h2 class="text-2xl font-semibold text-center mb-8 text-primary font-sans">Photo Gallery</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
       {galleryImages.map((img, i) => (
-        <img src={img.src} alt={`Gallery ${i+1}`} class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" loading="lazy" />
+        <Image src={img} alt={`Gallery ${i+1}`} width={600} height={400} class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" loading="lazy" />
       ))}
     </div>
     <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 hidden">
