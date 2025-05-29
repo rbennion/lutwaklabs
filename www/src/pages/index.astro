@@ -1,15 +1,57 @@
 ---
 import Layout from '../layouts/Layout.astro';
-// No frontmatter needed for static content
+// Hero images
+import hero1 from '../../public/images/IMG_0414.jpeg';
+import hero2 from '../../public/images/IMG_3880.jpeg';
+import hero3 from '../../public/images/IMG_2785.jpeg';
+// Gallery images
+import img1 from '../../public/images/gallery/IMG_6649.jpeg';
+import img2 from '../../public/images/gallery/IMG_5962.jpeg';
+import img3 from '../../public/images/gallery/IMG_5275.jpeg';
+import img4 from '../../public/images/gallery/IMG_4467.jpeg';
+import img5 from '../../public/images/gallery/IMG_4214.jpeg';
+import img6 from '../../public/images/gallery/IMG_3798.jpeg';
+import img7 from '../../public/images/gallery/IMG_3422.jpeg';
+import img8 from '../../public/images/gallery/IMG_3202.jpeg';
+import img9 from '../../public/images/gallery/IMG_3149.jpeg';
+import img10 from '../../public/images/gallery/IMG_3121.JPG';
+import img11 from '../../public/images/gallery/IMG_2892.jpeg';
+import img12 from '../../public/images/gallery/IMG_2661.jpeg';
+import img13 from '../../public/images/gallery/IMG_2611.jpeg';
+import img14 from '../../public/images/gallery/IMG_2554.jpeg';
+import img15 from '../../public/images/gallery/IMG_2519.jpeg';
+import img16 from '../../public/images/gallery/IMG_2367.jpeg';
+import img17 from '../../public/images/gallery/IMG_2305.jpeg';
+import img18 from '../../public/images/gallery/IMG_2275.jpeg';
+import img19 from '../../public/images/gallery/IMG_1796.jpeg';
+import img20 from '../../public/images/gallery/IMG_1781.jpeg';
+import img21 from '../../public/images/gallery/IMG_1713.jpeg';
+import img22 from '../../public/images/gallery/IMG_1644.jpeg';
+import img23 from '../../public/images/gallery/IMG_1593.jpeg';
+import img24 from '../../public/images/gallery/IMG_1416.jpeg';
+import img25 from '../../public/images/gallery/IMG_1329.JPG';
+import img26 from '../../public/images/gallery/IMG_1061.jpeg';
+import img27 from '../../public/images/gallery/IMG_0985.jpeg';
+import img28 from '../../public/images/gallery/IMG_0923.jpeg';
+import img29 from '../../public/images/gallery/IMG_0886.jpeg';
+import img30 from '../../public/images/gallery/IMG_0721.jpeg';
+import img31 from '../../public/images/gallery/IMG_0674.jpeg';
+import img32 from '../../public/images/gallery/IMG_0641.jpeg';
+import img33 from '../../public/images/gallery/IMG_0598.JPG';
+import img34 from '../../public/images/gallery/IMG_0414.jpeg';
+import img35 from '../../public/images/gallery/IMG_0061.jpeg';
+import img36 from '../../public/images/gallery/FullSizeRender.jpeg';
+import img37 from '../../public/images/gallery/947ACE6F-0FB9-4C3B-B03B-17164C25B6CB.jpeg';
+const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, img23, img24, img25, img26, img27, img28, img29, img30, img31, img32, img33, img34, img35, img36, img37];
 ---
 
 <Layout>
   {/* Hero Section */}
   <section class="relative bg-background flex items-center justify-center min-h-[500px] overflow-hidden" id="home">
     <div class="absolute inset-0 w-full h-full z-0">
-      <img src="/images/IMG_0414.jpeg" alt="Hero 1" class="hero-bg-image absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-[2500ms] opacity-100" style="z-index:1;" />
-      <img src="/images/IMG_3880.jpeg" alt="Hero 2" class="hero-bg-image absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-[2500ms] opacity-0" style="z-index:2;" />
-      <img src="/images/IMG_2785.jpeg" alt="Hero 3" class="hero-bg-image absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-[2500ms] opacity-0" style="z-index:3;" />
+      <img src={hero1.src} alt="Hero 1" class="hero-bg-image absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-[2500ms] opacity-100" style="z-index:1;" loading="eager" />
+      <img src={hero2.src} alt="Hero 2" class="hero-bg-image absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-[2500ms] opacity-0" style="z-index:2;" loading="eager" />
+      <img src={hero3.src} alt="Hero 3" class="hero-bg-image absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-[2500ms] opacity-0" style="z-index:3;" loading="eager" />
     </div>
     <div class="relative z-10 flex flex-col items-center justify-center max-w-2xl text-center">
       <h1 class="text-6xl font-bold text-white mb-4 font-sans hero-glow">Lutwak Labs</h1>
@@ -41,43 +83,9 @@ import Layout from '../layouts/Layout.astro';
   <section class="py-12 bg-card" id="gallery">
     <h2 class="text-2xl font-semibold text-center mb-8 text-primary font-sans">Photo Gallery</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-      <img src="/images/gallery/IMG_6649.jpeg" alt="Gallery 1" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_5962.jpeg" alt="Gallery 2" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_5275.jpeg" alt="Gallery 3" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_4467.jpeg" alt="Gallery 4" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_4214.jpeg" alt="Gallery 5" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_3798.jpeg" alt="Gallery 6" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_3422.jpeg" alt="Gallery 7" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_3202.jpeg" alt="Gallery 8" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_3149.jpeg" alt="Gallery 9" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_3121.JPG" alt="Gallery 10" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_2892.jpeg" alt="Gallery 11" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_2661.jpeg" alt="Gallery 12" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_2611.jpeg" alt="Gallery 13" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_2554.jpeg" alt="Gallery 14" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_2519.jpeg" alt="Gallery 15" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_2367.jpeg" alt="Gallery 16" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_2305.jpeg" alt="Gallery 17" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_2275.jpeg" alt="Gallery 18" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_1796.jpeg" alt="Gallery 19" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_1781.jpeg" alt="Gallery 20" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_1713.jpeg" alt="Gallery 21" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_1644.jpeg" alt="Gallery 22" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_1593.jpeg" alt="Gallery 23" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_1416.jpeg" alt="Gallery 24" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_1329.JPG" alt="Gallery 25" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_1061.jpeg" alt="Gallery 26" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_0985.jpeg" alt="Gallery 27" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_0923.jpeg" alt="Gallery 28" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_0886.jpeg" alt="Gallery 29" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_0721.jpeg" alt="Gallery 30" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_0674.jpeg" alt="Gallery 31" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_0641.jpeg" alt="Gallery 32" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_0598.JPG" alt="Gallery 33" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_0414.jpeg" alt="Gallery 34" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/IMG_0061.jpeg" alt="Gallery 35" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/FullSizeRender.jpeg" alt="Gallery 36" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
-      <img src="/images/gallery/947ACE6F-0FB9-4C3B-B03B-17164C25B6CB.jpeg" alt="Gallery 37" class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" />
+      {galleryImages.map((img, i) => (
+        <img src={img.src} alt={`Gallery ${i+1}`} class="rounded-lg shadow object-cover h-64 w-full cursor-pointer gallery-img" loading="lazy" />
+      ))}
     </div>
     <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 hidden">
       <img id="lightbox-img" src="" alt="Large preview" class="max-h-[90vh] max-w-[90vw] rounded-lg shadow-2xl" />
